@@ -1,5 +1,8 @@
 <template>
+  <div>
     <div>Right组件</div>
+    <MineCount></MineCount>
+  </div>
 </template>
 
 <script>
