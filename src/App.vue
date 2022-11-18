@@ -1,28 +1,49 @@
+
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="root">
+    <h1>App根组件</h1>
+
+    <div class="left">
+      <Left></Left>
+    </div>
+    <div class="right">
+      <Right></Right>
+    </div>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  // 1、导入组件
+  import Left from '@/components/Left.vue'
+  import Right from '@/components/Right.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  // 2、注册组件
+  export default {
+    components: {
+      Left,
+      Right
+    }
   }
-}
 </script>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="less" scoped>
+  .root {
+    padding: 5px 20px 110px 20px;
+    background-color: #efefef;
+  }
+  .left {
+    float: left;
+    background-color: aqua;
+    width: 50%;
+    padding: 5px 0px 20px 0px;
+    font-weight: bolder;
+  }
+  .right {
+    float: right;
+    background-color: #e0e30e;
+    width: 50%;
+    padding: 5px 0px 20px 0px;
+    font-weight: bolder;
+  }
 </style>
