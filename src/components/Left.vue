@@ -1,17 +1,33 @@
 <template>
-  <div>
-    <div>Left组件</div>
-    <MineCount></MineCount>
-  </div>
+    <div class="left">
+        <h3>Left组件</h3>
+        <MineCount :init="init"></MineCount>
+    </div>
 </template>
 
 <script>
 
 export default {
 
+    data() {
+        return {
+            init: 9
+        }
+    }
+
 }
+
 </script>
 
 <style lang="less" scoped>
-
+.left {
+    float: left;
+    background-color: aqua;
+    padding: 5px 0px 20px 20px;
+    font-weight: bolder;
+    width: 48%;
+}
+/deep/ h5 {
+    color: red;
+}
 </style>
