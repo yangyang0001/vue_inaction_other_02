@@ -36,7 +36,7 @@ export default {
                 const result = JSON.parse(xhr.responseText);
                 this.books = result;
             });
-            xhr.open('GET', 'http://localhost:8888/getbooks');
+            xhr.open('GET', 'http://localhost:8888/getBooks');
             xhr.send();
         },
 
